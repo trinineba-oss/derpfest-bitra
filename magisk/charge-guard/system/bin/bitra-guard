@@ -1,0 +1,15 @@
+#!/system/bin/sh
+# Usage: bitra-guard [status|log|boost on|boost off]   (run as root: su -c bitra-guard ...)
+MOD=/data/adb/modules/bitra_charge_guard
+CONF=/data/adb/bitra_charge_guard.conf
+case "$1" in
+  ""|status) sh $MOD/status.sh ;;
+  log) tail -n 30 /data/adb/bitra_charge_guard/guard.log ;;
+  boost)
+    case "$2" in
+      on) v=1 ;; off) v=0 ;; *) echo "usage: bitra-guard boost on|off"; exit 1 ;;
+    esac
+    if grep -q '^BOOST=' $CONF; then sed -i "s/^BOOST=.*/BOOST=$v/" $CONF; else echo "BOOST=$v" >> $CONF; fi
+    echo "Cooler charging $2 (applies within 10 s)" ;;
+  *) echo "usage: bitra-guard [status|log|boost on|boost off]"; exit 1 ;;
+esac

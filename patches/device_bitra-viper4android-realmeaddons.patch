@@ -1,0 +1,33 @@
+diff --git a/BoardConfig.mk b/BoardConfig.mk
+index 610dd58..39bd2d4 100644
+--- a/BoardConfig.mk
++++ b/BoardConfig.mk
+@@ -34,3 +34,6 @@ TARGET_RECOVERY_UI_MARGIN_HEIGHT := 103
+ 
+ # Include the proprietary files BoardConfig.
+ include vendor/realme/bitra/BoardConfigVendor.mk
++
++# RealmeAddons sepolicy
++include packages/apps/RealmeAddons/sepolicy/SEPolicy.mk
+diff --git a/device.mk b/device.mk
+index 040889b..0c4857b 100644
+--- a/device.mk
++++ b/device.mk
+@@ -58,3 +58,17 @@ $(call inherit-product, device/realme/sm8250-common/common.mk)
+ 
+ # Inherit from the proprietary files makefile.
+ $(call inherit-product, vendor/realme/bitra/bitra-vendor.mk)
++
++# ViPER4Android RE (built in instead of the Magisk module; no root needed).
++# Effect registration lives in sm8250-common/audio/audio_effects.xml.
++PRODUCT_PACKAGES += \
++    ViPER4Android \
++    libv4a_re
++
++PRODUCT_COPY_FILES += \
++    vendor/viper4android/proprietary/system/etc/permissions/privapp-permissions-viper4android.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-viper4android.xml
++
++# RealmeAddons (thermal/game profiles, ZRAM, bypass/smart charging, game bar,
++# HBM, anti-flicker). Sepolicy is added in BoardConfig.mk.
++PRODUCT_PACKAGES += \
++    RealmeAddons

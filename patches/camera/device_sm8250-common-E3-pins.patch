@@ -1,0 +1,28 @@
+diff --git a/proprietary-files.txt b/proprietary-files.txt
+index b54f4ea..c9af016 100644
+--- a/proprietary-files.txt
++++ b/proprietary-files.txt
+@@ -22,7 +22,7 @@ odm/lib/rfsa/adsp/libQnnHtpSkel.so
+ odm/lib/rfsa/adsp/libVDHexagonBlurless_v2_skel.so
+ odm/lib/rfsa/adsp/libarc_hta_driver_skel.so
+ odm/lib/rfsa/adsp/libarcsoft_dualcam_refocus_5221_skel.so
+-odm/lib/rfsa/adsp/libarcsoft_dualcam_refocus_skel.so
++odm/lib/rfsa/adsp/libarcsoft_dualcam_refocus_skel.so|2d7abab9c8d72d5410df2b6ab7a4d151c8151926
+ odm/lib/rfsa/adsp/libarcsoft_hdrplus_hvx_skel.so
+ odm/lib/rfsa/adsp/libarcsoft_portraitSN_hvx_skel.so
+ odm/lib/rfsa/adsp/libc++.so.1
+@@ -130,10 +130,10 @@ vendor/lib64/vendor.qti.hardware.fm@1.0.so
+ 
+ # Camera - from OnePlus 12 (CPH2581_14.0.0.850(EX01))
+ odm/lib64/libarc.ion.so|66db5600d6ac48ac5abb7ed7aecdcf3fee92dbc2
+-odm/lib64/libarcsoft_dualcam_bokeh_api.so|bfdca4001321d1da972a5d8203b7f2aab6bbeb4d
+-odm/lib64/libarcsoft_dualcam_refocus_left.so|af5108ddfcb055ea6d55a03831a39f5001ab287e
+-odm/lib64/libarcsoft_dualcam_refocus_preview.so|41c885f87cecd952b4fa5eb7459c3dc5f832b893
+-odm/lib64/libarcsoft_dualcam_refocus_uw.so|ac685bfd05d0fd656a17df96c083086e91425802
++odm/lib64/libarcsoft_dualcam_bokeh_api.so|1ab59342de1b31e8ed70335783a4f5f40653fb7d
++odm/lib64/libarcsoft_dualcam_refocus_left.so|6b5d9bfe5251830fb54ac1f34b6e77339e32347e
++odm/lib64/libarcsoft_dualcam_refocus_preview.so|e76f27e392463562ab447595dc5cdd587a61c000
++odm/lib64/libarcsoft_dualcam_refocus_uw.so|6c290a3a3875f14e776f8df6d37670dec61e4086
+ odm/lib64/libarcsoft_qnnhtp.so|5097ce96f3a1af4b4b3e5e1c415f4c1105e94d9b
+ 
+ # Camera

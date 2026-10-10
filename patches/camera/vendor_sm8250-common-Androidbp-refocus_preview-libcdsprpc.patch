@@ -1,0 +1,13 @@
+diff --git a/Android.bp b/Android.bp
+index 6b88161..73c2b73 100644
+--- a/Android.bp
++++ b/Android.bp
+@@ -20927,7 +20927,7 @@ cc_prebuilt_library_shared {
+                 "proprietary/odm/lib64/libarcsoft_dualcam_refocus_preview.so",
+             ],
+             shared_libs: [
+-                "libarc.ion",
++                "libcdsprpc",
+                 "libmpbase",
+                 "liblog",
+                 "libc",

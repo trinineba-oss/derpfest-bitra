@@ -1,0 +1,6 @@
+id=bitra_charge_guard
+name=Bitra Charge & Thermal Guard
+version=v1.0.1-test
+versionCode=2
+author=trinineba
+description=realme GT Neo 2: full-speed charging while cool, skin-temperature cool-down only when hot, optional cooler charging (CPU cap while charging with the screen on), and a watchdog for the NXP NFC HAL spin bug. Status: Action button or `su -c bitra-guard`.

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="ghub" fetch="https://github.com/SM8250-Common" />
+    <remote name="github-v4a" fetch="https://github.com" />
+    <remote name="glab" fetch="https://gitlab.com/bijoyv9" />
+
+    <!-- Device -->
+    <project path="device/realme/bitra" name="android_device_realme_bitra" revision="lineage-23.2" remote="ghub" />
+    <project path="device/realme/sm8250-common" name="android_device_realme_sm8250-common" revision="lineage-23.2" remote="ghub" />
+    <project path="device/oplus/camera" name="android_device_oplus_camera" revision="lineage-23.2" remote="ghub" />
+
+    <!-- Hardware -->
+    <project path="hardware/oplus" name="android_hardware_oplus" revision="lineage-23.2" remote="ghub" />
+    <project path="hardware/dolby" name="android_hardware_dolby" revision="lineage-23.2" remote="ghub" />
+
+    <!-- Kernel -->
+    <project path="kernel/realme/sm8250" name="android_kernel_realme_sm8250" revision="lineage-23.2" remote="ghub" />
+
+    <!-- Packages -->
+    <project path="packages/apps/RealmeAddons" name="android_packages_apps_RealmeAddons" revision="lineage-23.2" remote="ghub" />
+
+    <!-- Vendor -->
+    <project path="vendor/realme/bitra" name="proprietary_vendor_realme_bitra" revision="lineage-23.2" remote="glab" />
+    <project path="vendor/realme/sm8250-common" name="proprietary_vendor_realme_sm8250-common" revision="lineage-23.2" remote="glab" />
+    <project path="vendor/oplus/camera" name="proprietary_vendor_oplus_camera" revision="lineage-23.2" remote="glab" />
+
+    <!-- ViPER4Android RE (prebuilt app + effect lib, extracted from AOSPA gapps) -->
+    <project path="vendor/viper4android" name="ronardnx/android_vendor_viper4android" revision="main" remote="github-v4a" />
+</manifest>

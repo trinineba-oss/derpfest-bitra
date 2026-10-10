@@ -1,0 +1,6 @@
+id=bitra_wifi_roam_fix
+name=Bitra Wi-Fi 5 GHz Roam Fix
+version=v1.0-test
+versionCode=1
+author=trinineba
+description=Lets the Wi-Fi chip move back from 2.4 GHz to 5 GHz on the same network. Restores Qualcomm's defaults roam_bg_scan_client_bitmap=0x424 and roam_bad_rssi_thresh_offset_2g=40 in the ROM's WCNSS_qcom_cfg.ini.
