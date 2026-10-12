@@ -41,7 +41,7 @@ You need an unlocked bootloader and a TWRP that supports dynamic partitions.
   - Cause: an upstream LineageOS commit, reverted on 2026-10-04.
   - Fixed in the next build.
   - Until then: reboot, or use the Charge & Thermal Guard module below, which restarts the stuck NFC service automatically.
-- **RealmeAddons ZRAM page doesn't work.** ZRAM itself is on (4 GB); only the settings switch is broken. Fix planned.
+- **RealmeAddons ZRAM page doesn't work.** ZRAM itself is on (4 GB, set at boot by the vendor script); only the settings switch is broken. The next build hides the page instead of fixing it, since the setting is rarely needed.
 - **Phone stays on 2.4 GHz Wi-Fi.** The stock Oplus Wi-Fi config turns off roaming back to 5 GHz, so once the phone drops to 2.4 GHz it stays there. Fix planned. Until then, turn Wi-Fi off and on, or use the Wi-Fi Roam Fix module below.
 - **5 GHz hotspot** probably runs without Wi-Fi 5 (802.11ac) or automatic channel selection. Not yet confirmed on the phone.
 
