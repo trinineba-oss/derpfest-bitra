@@ -8,8 +8,8 @@ An unofficial DerpFest 16.2 (Android 16 QPR2) build for the **realme GT Neo 2 (b
 
 | | |
 |---|---|
-| File | `DerpFest-v16.2-20261005-bitra-Community-Stable.zip` (3.25 GiB) |
-| SHA-256 | `929ccbbd4816976171884909fed6691d8cdc1a10ed9241cbf1cd5a0d2517aa87` |
+| File | `DerpFest-v16.2-20261023-bitra-Community-Stable.zip` (3.25 GiB) |
+| SHA-256 | `2b9e2c31f174375b1e94f0b5fdff120f9f0069b2291630ffdbfaf3eed6885bd5` |
 | Security patch | 2026-08-01 |
 | Google apps | Included |
 | Signing | AOSP test keys |
@@ -37,17 +37,15 @@ You need an unlocked bootloader and a TWRP that supports dynamic partitions.
 
 ## Known issues
 
-- **NFC battery drain.** On some boots the NXP NFC service gets stuck in a loop and uses about 3 CPU cores. The phone runs hot, and because the battery gets warmer, VOOC charges slower.
-  - Cause: an upstream LineageOS commit, reverted on 2026-10-04.
-  - Fixed in the next build.
-  - Until then: reboot, or use the Charge & Thermal Guard module below, which restarts the stuck NFC service automatically.
-- **RealmeAddons ZRAM page doesn't work.** ZRAM itself is on (4 GB, set at boot by the vendor script); only the settings switch is broken. The next build hides the page instead of fixing it, since the setting is rarely needed.
-- **Phone stays on 2.4 GHz Wi-Fi.** The stock Oplus Wi-Fi config turns off roaming back to 5 GHz, so once the phone drops to 2.4 GHz it stays there. Fix planned. Until then, turn Wi-Fi off and on, or use the Wi-Fi Roam Fix module below.
-- **5 GHz hotspot** probably runs without Wi-Fi 5 (802.11ac) or automatic channel selection. Not yet confirmed on the phone.
+- Lock screen shows "Charging", not "Charging rapidly" (the charger driver doesn't report its limits). VOOC itself works.
+- RealmeAddons thermal profiles have no effect (the kernel lacks the node they use).
+- Security patch level is 2026-08-01: DerpFest 16.2 itself hasn't been updated since July.
+
+Fixed in the 2026-10-23 build: the NFC battery-drain loop (upstream revert), Wi-Fi staying on 2.4 GHz, the 5 GHz hotspot's Wi-Fi 5 and channel selection (configured, not yet measured), and the non-working ZRAM page (now hidden).
 
 ## Magisk modules (`magisk/`)
 
-These are test modules for this build. Build each with its own `build.sh`.
+These are test modules. The 2026-10-23 build includes the Wi-Fi roaming fix, so `wifi-roam` is only for older builds. Build each with its own `build.sh`.
 
 | Module | What it does |
 |---|---|

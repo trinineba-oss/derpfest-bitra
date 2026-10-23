@@ -1,0 +1,46 @@
+diff --git a/AndroidManifest.xml b/AndroidManifest.xml
+index 934e92e..5677834 100644
+--- a/AndroidManifest.xml
++++ b/AndroidManifest.xml
+@@ -218,12 +218,14 @@
+         <!-- Zram -->
+         <activity
+             android:name=".zram.ZramActivity"
++            android:enabled="false"
+             android:exported="false"
+             android:label="@string/zram_settings_title"
+             android:enableOnBackInvokedCallback="true" />
+ 
+         <service
+             android:name=".zram.ZramTileService"
++            android:enabled="false"
+             android:icon="@drawable/ic_zram"
+             android:label="@string/zram_tile_label"
+             android:exported="true"
+diff --git a/res/xml/device_settings.xml b/res/xml/device_settings.xml
+index ec5bd19..c9e2892 100644
+--- a/res/xml/device_settings.xml
++++ b/res/xml/device_settings.xml
+@@ -14,7 +14,8 @@
+      See the License for the specific language governing permissions and
+      limitations under the License.
+ -->
+-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
++<PreferenceScreen
++    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+ 
+     <PreferenceCategory
+         android:key="device_settings_header_category">
+@@ -92,10 +93,12 @@
+ 
+     <PreferenceCategory
+         android:key="performance_category"
++        app:isPreferenceVisible="false"
+         android:title="Performance">
+ 
+         <Preference
+             android:key="zram"
++            app:isPreferenceVisible="false"
+             android:title="@string/zram_settings_title"
+             android:summary="@string/zram_settings_summary">
+             <intent

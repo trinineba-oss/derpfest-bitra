@@ -13,13 +13,12 @@ apply() { # <project dir> <patch>
     echo "FAILED   $2  (upstream changed: check by hand)"
   fi
 }
-apply vendor/realme/bitra               patches/vendor_realme_bitra-import-hardware-oplus.patch
 apply frameworks/base                   patches/frameworks_base-sqlitetokenizer-check-brackets.patch
 apply device/realme/sm8250-common       patches/device_sm8250-common-viper4android-audio-effects.patch
 apply device/realme/bitra               patches/device_bitra-viper4android-realmeaddons.patch
-apply device/realme/sm8250-common       patches/camera/device_sm8250-common-E3-pins.patch
-apply vendor/realme/sm8250-common       patches/camera/vendor_sm8250-common-Androidbp-refocus_preview-libcdsprpc.patch
+apply vendor/realme/sm8250-common       patches/vendor_sm8250-common-wifi-roam-5ghz.patch
+apply device/realme/sm8250-common       patches/device_sm8250-common-softap-ac-acs.patch
+apply packages/apps/RealmeAddons        patches/RealmeAddons-hide-zram.patch
 echo
-echo "Camera: the 5 OnePlus 8T ArcSoft libs are NOT in this repo. Get them from"
-echo "https://github.com/trinineba-oss/bitra-portrait-fix (blobs/) and copy them to"
-echo "  $TOP/vendor/realme/sm8250-common/proprietary/odm/lib64/ (4 .so) and .../odm/lib/rfsa/adsp/ (skel)."
+echo "Camera: the OnePlus 8T ArcSoft libs and the vendor namespace import are upstream since 2026-10-07;"
+echo "patches/camera/ and the bitra namespace patch are kept only for older trees."

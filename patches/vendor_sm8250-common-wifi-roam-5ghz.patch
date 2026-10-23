@@ -1,0 +1,22 @@
+diff --git a/proprietary/odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini b/proprietary/odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini
+index 22c0806..dd8f1b2 100644
+--- a/proprietary/odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini
++++ b/proprietary/odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini
+@@ -109,7 +109,7 @@ gSelect5GHzMargin=5
+ 
+ # avoid background roaming roam from 2g to 5g
+ # RSSI threshold offset for 2G to 5G roam
+-roam_bad_rssi_thresh_offset_2g=0
++roam_bad_rssi_thresh_offset_2g=40
+ 
+ #Add for dense roam
+ gtraffic_threshold=55
+@@ -118,7 +118,7 @@ groam_dense_rssi_thresh_offset=0
+ #add for roam scan diff
+ gRoamRescanRssiDiff=3
+ #add for disable background scan roam
+-roam_bg_scan_client_bitmap=0
++roam_bg_scan_client_bitmap=0x424
+ #endif /* OPLUS_BUG_STABILITY */
+ 
+ #Channel Bonding

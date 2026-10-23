@@ -1,0 +1,12 @@
+diff --git a/overlay/WifiResTarget/res/values/config.xml b/overlay/WifiResTarget/res/values/config.xml
+index d0d6fe1..48643ef 100644
+--- a/overlay/WifiResTarget/res/values/config.xml
++++ b/overlay/WifiResTarget/res/values/config.xml
+@@ -17,5 +17,7 @@
+ 
+     <!-- Wifi driver supports IEEE80211AX for softap -->
+     <bool name="config_wifiSoftapIeee80211axSupported">true</bool>
++    <bool name="config_wifi_softap_ieee80211ac_supported">true</bool>
++    <bool name="config_wifi_softap_acs_supported">true</bool>
+ 
+ </resources>
